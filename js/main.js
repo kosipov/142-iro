@@ -4,9 +4,7 @@ const body = document.querySelector(".body");
 const table = document.querySelector(".body__table");
 const createTableCell = (value) => `<td>${value}</td>`;
 
-initTable();
-
-function initTable() {
+const initTable = () => {
   JSON.forEach((value) => {
     let insertElement = createTableCell(value.address + value.name)
     let fuelElements = ``;
@@ -20,4 +18,6 @@ function initTable() {
     </tr>`
       )
   });
-}
+};
+
+initTable();
